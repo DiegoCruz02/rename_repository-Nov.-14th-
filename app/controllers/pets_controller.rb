@@ -1,4 +1,7 @@
 class PetsController < ApplicationController
+  #LOOK AT THIS THIS EXPALINS A LOT!!!
+  # we are using the before action and we made a method that is performed at the very begining for all of the methods in the array
+  # use this if needed!!!!
   before_action :set_pet, only: [:show, :edit, :destroy, :update]
 
   def set_pet

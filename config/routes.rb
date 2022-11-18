@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #resources :pets, only: [:create, :update] 
   # Routes for the Pet resource:
 resources :pets
+root("pets#index")
   # CREATE
   #we can use /pets 2 times because the routes are still different (post is used here and get is used elswhere)
   #these are the main differences if they were borh get it would break!
