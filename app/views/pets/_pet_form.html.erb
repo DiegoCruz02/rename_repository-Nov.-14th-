@@ -1,0 +1,32 @@
+<!--we dont net to make our prms anymore just use helper methods
+*use the view source to look at how the form was generated and see if there is anything you want to change
+*remember for HTML we use our paths names!!!
+
+
+AHAHAHAHAHAHAHAHAHAHAAHAH WHERE ARE WEEEEEEEEE?????
+
+looks like to make it easier on us we can create a template with _ in front of it in our file tree and we can then call it later if there are a lot
+of similarities in our code
+-->
+<%  @pet.errors.full_messages.each do |error| %>
+  <%= error %>
+<% end %>
+
+  <%= form_with model: @pet do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :age %>
+    <%= form.text_field :age %>    
+  </div>
+
+  <div>
+    <%= form.label :species_id %>
+    <%= form.text_field :species_id%>
+  </div>
+
+  <%= form.submit %>
+  <% end %>
